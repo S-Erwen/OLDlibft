@@ -44,6 +44,9 @@ $(NAME) : $(OBJS)
 all : $(NAME)
 
 clean:
-		rm -f $(OBJS)
-		
-re: all clean
+		$(RM) $(OBJS)
+
+fclean: clean
+		$(RM) $(NAME)
+
+re: fclean all
