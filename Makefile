@@ -30,7 +30,17 @@ SRCS 	= 	main.c \
 			ft_isalnum.c \
 			ft_toupper.c \
 			ft_tolower.c \
-
+			ft_memalloc.c \
+			ft_memdel.c \
+			ft_strnew.c \
+			ft_strdel.c \
+			ft_strclr.c \
+			ft_striter.c \
+			ft_striteri.c \
+			ft_strmap.c \
+			ft_strmapi.c \
+			ft_strnequ.c \
+			ft_strsub.c \
 
 HEADER 	= libft.h
 OBJS 	= ${SRCS:.c=.o}
