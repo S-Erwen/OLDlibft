@@ -14,21 +14,14 @@
 char	*ft_strncat(char *dest, const char *src, size_t size)
 {
 	unsigned int 	i;
-	int				y;
+	unsigned int	y;
 
 	i = 0;
 	y = 0;
 	while (dest[i])
 		i++;
-	while (src[y] && size > i)
-	{
-		dest[i] = src[y];
-		i++;
-		y++;
-		size--;
-	}
-	while (size > i)
-		dest[i++] = '\0';
-	
+	while (src[y] && size > y)
+		dest[i++] = src[y++];
+	dest[i] = '\0';
 	return (dest);
 }

@@ -91,17 +91,17 @@ int main()
 	/*
 	printf("\n\n== Strcat ==\n\n");
 
-	char 	srcat[19] = "Ea non Lorem aute ";
-	char	destcat[22] = "Lorem aute quis sint.";
+	char 	srcat[] = "lorem";
+	char	destcat[] = "a";
 
 	printf("Chaine de carractere avant ft_cat = %s\n", destcat);
 	ft_strcat(destcat, srcat);
 	printf("Chaine de carractere apres ft_cat = %s\n\n", destcat);
 
-	============================================================= 
+	// ============================================================= 
 
-	char 	cat_src[19] = "Ea non Lorem aute ";
-	char	cat_dest[22] = "Lorem aute quis sint.";
+	char 	cat_src[] = "lorem";
+	char	cat_dest[] = "a";
 
 	printf("Chaine de carractere avant cat = %s\n", cat_dest);
 	strcat(cat_dest, cat_src);
@@ -112,30 +112,29 @@ int main()
 	/*
 	printf("\n\n== Strncat ==\n\n");
 
-	char 	srncat[19] = "Ea non Lorem aute ";
-	char	destncat[22] = "Lorem aute quis sint. ";
-	int		taille_cat = 35;
+	char 	srncat[] = "lorem";
+	char	destncat[] = "a";
+	int		taille_cat = 2;
 
 	printf("Chaine de carractere avant ft_ncat = %s\n", destncat);
 	ft_strncat(destncat, srncat, taille_cat);
 	printf("Chaine de carractere apres ft_ncat = %s\n\n", destncat);
 
-	============================================================= 
+	// ============================================================= 
 
-	char 	ncat_src[19] = "Ea non Lorem aute ";
-	char	ncat_dest[22] = "Lorem aute quis sint. ";
+	char 	ncat_src[] = "lorem";
+	char	ncat_dest[] = "a";
 
 	printf("Chaine de carractere avant ncat = %s\n", ncat_dest);
 	strncat(ncat_dest, ncat_src, taille_cat);
 	printf("Chaine de carractere apres ncat = %s\n", ncat_dest);
-
 	*/
 	/* ============ Strcmp ============ */
 	/*
 	printf("\n\n== Strcmp ==\n\n");
 
-	char 	srcmp[] = "Ea non Lorem auto";
-	char	destcmp[] = "Ea non Lorem auto";
+	char 	srcmp[] = "test\0";
+	char	destcmp[] = "test\200";
 	
 	printf("Taille de strcmp = %d\n", strcmp(srcmp, destcmp));
 	if (ft_strcmp(srcmp, destcmp) == 0)
@@ -145,7 +144,7 @@ int main()
 	else if (ft_strcmp(srcmp, destcmp) < 0)
 		printf("La premiere chaine est plus petite\n");
 
-	============================================================= 
+	// ============================================================= 
 	
 	printf("Taille de ft_strcmp = %d\n", ft_strcmp(srcmp, destcmp));
 	if (strcmp(srcmp, destcmp) == 0)
@@ -185,12 +184,12 @@ int main()
 	*/
 
 	/* ============ Strncmp ============ */
-	/*
+	
 	printf("\n\n== Strncmp ==\n\n");
 
-	char 	srncmp[] = "Ea 1";
-	char	destncmp[] = "Ea 1";
-	int		size_ncmp = 4;
+	char 	srncmp[] = "zyxbcdefgh";
+	char	destncmp[] = "abcdwxyz";
+	int		size_ncmp = 0;
 	
 	printf("Taille de strncmp = %d\n", ft_strncmp(srncmp, destncmp, size_ncmp));
 	if (ft_strncmp(srncmp, destncmp, size_ncmp) == 0)
@@ -200,7 +199,7 @@ int main()
 	else if (ft_strncmp(srncmp, destncmp, size_ncmp) < 0)
 		printf("La premiere chaine est plus petite\n");
 
-	 ============================================================= 
+	// ============================================================= 
 	
 	printf("Taille de ft_strncmp = %d\n", strncmp(srncmp, destncmp, size_ncmp));
 	if (strncmp(srncmp, destncmp, size_ncmp) == 0)
@@ -209,7 +208,6 @@ int main()
 		printf("V = La premiere chaine est plus grande\n");
 	else if (strncmp(srncmp, destncmp, size_ncmp) < 0)
 		printf("V = La premiere chaine est plus petite\n");
-	*/
 
 	/* ============ Strstr ============ 
 	char	s1_str[] = "Test";
@@ -233,8 +231,8 @@ int main()
 
 	/* ============ Strchr ============ */
 	/*
-	char	string_chr[] = "Testeur";
-	int		chr_test = 'r';
+	char	string_chr[] = "Bonjour";
+	int		chr_test = '\0';
 	
 	printf("Voici le resulat de ft_strchr = %s\n", ft_strchr(string_chr, chr_test));
 
@@ -257,9 +255,9 @@ int main()
 	/*
 	printf("\n\n== Memcmp ==\n\n");
 
-	char 	srmencmp[] = "Aute incididunt enim exercitation.";
-	char	destmemcmp[] = "Aute iencididunt enim exercitation.";
-	int		size_memcmp = 5;
+	char 	srmencmp[] = "t\200";
+	char	destmemcmp[] = "t\0";
+	int		size_memcmp = 2;
 
 	printf("Taille de ft_memcmp = %d\n", ft_memcmp(srmencmp, destmemcmp, size_memcmp));
 	if (ft_memcmp(srmencmp, destmemcmp, size_memcmp) == 0)
@@ -295,8 +293,8 @@ int main()
 	/*
 	printf("\n\n== Memcpy ==\n\n");
 
-	char 	srmemcpy[40] = "Ea non Lorem aute Lorem aute quis sint.";
-	char	destmemcpy[15];
+	char 	srmemcpy[] = "testss";
+	char	destmemcpy[] = "test";
 	int		memcpy_nb = 10;
 
 
@@ -306,8 +304,8 @@ int main()
 
 	// ============================================================= 
 
-	char 	memcpy_src[40] = "Ea non Lorem aute Lorem aute quis sint.";
-	char	memcpy_dest[40];
+	char 	memcpy_src[] = "testss";
+	char	memcpy_dest[] = "test";
 
 	printf("Chaine de carractere avant cpy = %s\n", memcpy_dest);
 	memcpy(memcpy_dest, memcpy_src, memcpy_nb);

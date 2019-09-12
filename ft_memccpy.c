@@ -17,15 +17,15 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t size)
 	char			*dust2;
 	char			*mirage;
 
-	dust2 = dest;
+	dust2 = (char *)dest;
 	mirage = (char *)src;
 	i = 0;
-	while (size > i && (i == 0 || mirage[i - 1] != c))
+	while (i < size)
 	{
 		dust2[i] = mirage[i];
+		if (dust2[i] == c)
+			return (dust2 + i + 1);
 		i++;
 	}
-	if (mirage[i] == c && i > 0)
-			return (dust2 + i);
 	return (NULL);
 }
