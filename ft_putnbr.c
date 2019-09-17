@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Erwen <dev.sanjaro@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/01 20:35:55 by Erwen             #+#    #+#             */
-/*   Updated: 2019/09/01 20:35:55 by Erwen            ###   ########.fr       */
+/*   Created: 2019/09/16 02:07:58 by Erwen             #+#    #+#             */
+/*   Updated: 2019/09/16 02:07:58 by Erwen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_outputchar(char c)
 {
-	int		i;
+	write(1, &c, 1);
+}
 
-	i = 0;
-	while (s[i])
+void	ft_putnbr(int n)
+{
+	if (n >= 0 && n <= 9)
+		ft_outputchar(n + '0');
+	else if (n == -2147483648)
+		write(1, "-2147483648", 11);
+	else if (n < 0)
 	{
-		if (c == s[i])
-			return ((char *)s + i);
-		i++;
+		n = -n;
+		ft_outputchar('-');
+		ft_putnbr(n);
 	}
-	if (c == s[i])
-		return ((char *)s + i);
-	return (0);
+	else if (n > 0)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	else
+		ft_outputchar(n);
 }

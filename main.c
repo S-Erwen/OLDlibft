@@ -184,7 +184,7 @@ int main()
 	*/
 
 	/* ============ Strncmp ============ */
-	
+	/* 
 	printf("\n\n== Strncmp ==\n\n");
 
 	char 	srncmp[] = "zyxbcdefgh";
@@ -208,7 +208,7 @@ int main()
 		printf("V = La premiere chaine est plus grande\n");
 	else if (strncmp(srncmp, destncmp, size_ncmp) < 0)
 		printf("V = La premiere chaine est plus petite\n");
-
+	*/
 	/* ============ Strstr ============ 
 	char	s1_str[] = "Test";
 	char 	s2_str[] = "e";
@@ -499,5 +499,25 @@ int main()
 	// ============================================================= 
 	tlower2 = tolower(lower);
 	printf("Le lower = %c\n",tlower2);
+	*/
+	/* ============ Strsub ============ */
+	/*
+	char test[] = "Salut";
+	char *vide;
+	int	t = 2;
+	vide = ft_strsub(test, t, 8);
+	printf("%s", vide);
+	*/
+	/* ============ Strsplit ============ */
+	/*
+	char **splided;
+	splided = ft_strsplit("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.", 'i');
+
+	int slp = 0;
+	while (splided[slp])
+	{
+		printf("Voici la chaine de la %der/eme carractere = %s\n", slp + 1, splided[slp]);
+		slp++;
+	}
 	*/
 }

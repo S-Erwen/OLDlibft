@@ -13,5 +13,24 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
+	char			*string_malloced;
+	unsigned int 	i;
+	unsigned int	max_len;
 
+	if (!(string_malloced = (char *)malloc(sizeof(char) * len + 1)))
+		return (0);
+	i = 0;
+	max_len = 0;
+	while (s[max_len])
+		max_len++;
+	if (max_len < start)
+		return (0);
+	while (i < len && s[start])
+	{
+		string_malloced[i] = (char)s[start];
+		start++;
+		i++;
+	}
+	string_malloced[i] = '\0';
+	return (string_malloced);
 }
