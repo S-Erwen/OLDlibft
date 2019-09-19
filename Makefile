@@ -46,6 +46,11 @@ SRCS 	= 	main.c \
 			ft_strsplit.c \
 			ft_putnbr.c \
 			ft_itoa.c \
+			ft_putendl.c \
+			ft_putchar_fd.c \
+			ft_putstr_fd.c \
+			ft_putendl_fd.c \
+			ft_putnbr_fd.c
 
 HEADER 	= libft.h
 OBJS 	= ${SRCS:.c=.o}

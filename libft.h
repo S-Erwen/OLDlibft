@@ -70,8 +70,13 @@ char	**ft_strsplit(char const *s, char c);
 void	ft_putchar(char c);
 void	ft_putstr(const char *str);
 void	ft_putnbr(int n);
+void	ft_putendl(char const *s);
 
 char	*ft_itoa(int n);
 
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 # endif

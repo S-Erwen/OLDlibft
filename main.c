@@ -521,12 +521,12 @@ int main()
 	}
 	*/
 	/* ============ Itoa ============ */
-	
+	/*
 	char 	*str_of_itoa;
 	int		nbr_of_itoa = -2147483648;
 
 	str_of_itoa = 
 	ft_itoa(nbr_of_itoa);
 	printf("%s", str_of_itoa);
-	
+	*/
 }
