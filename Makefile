@@ -1,4 +1,4 @@
-NAME 	= 	libft
+NAME 	= 	libft.a
 
 SRCS 	= 	main.c \
 			ft_putstr.c \
@@ -45,6 +45,7 @@ SRCS 	= 	main.c \
 			ft_strtrim.c \
 			ft_strsplit.c \
 			ft_putnbr.c \
+			ft_itoa.c \
 
 HEADER 	= libft.h
 OBJS 	= ${SRCS:.c=.o}
@@ -55,11 +56,7 @@ OBJS 	= ${SRCS:.c=.o}
 $(NAME) : $(OBJS)
 		gcc $(OBJS) -o $(NAME)
 
-all:
-		$(NAME)
-
-so:
-		$(NAME).so
+all : $(NAME)
 
 clean:
 		$(RM) $(OBJS)
