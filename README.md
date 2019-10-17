@@ -7,4 +7,6 @@ Voici la Libft que j'ai faite pendant les vacances _pour le fun_ après un fail 
 PS : Pas à la norme !
 </span>
 
+EDIT: Pas de secure dans les fonctions, et surement plein de probleme memoire.
+
 ![alt text](https://github.com/Sanjaro-42/libft/blob/master/Finished.PNG)
